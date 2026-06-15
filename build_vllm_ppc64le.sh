@@ -235,7 +235,7 @@ uv pip install "${WHEEL_DIR}"/*.whl \
 
 sed -i.bak -e 's/.*torch.*//g' pyproject.toml requirements/*.txt
 
-uv pip install "setuptools==77.0.3" --no-build-isolation
+uv pip install "setuptools>=78.1.1" --no-build-isolation
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib64/pkgconfig:/usr/lib64/pkgconfig
 
