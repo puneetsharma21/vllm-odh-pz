@@ -160,8 +160,11 @@ uv pip install \
     cmake \
     ninja \
     pybind11 \
-    nanobind \
-    "apache-tvm-ffi==0.1.12"
+    nanobind
+    
+uv pip install apache-tvm-ffi==0.1.12 \
+  --no-build-isolation \
+  --no-cache
 
 TEMP_BUILD_DIR=$(mktemp -d)
 
