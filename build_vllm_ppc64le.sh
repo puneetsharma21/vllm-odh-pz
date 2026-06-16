@@ -161,6 +161,7 @@ uv pip install \
     packaging \
     distro \
    "setuptools<70" \
+    setuptools_scm
     cmake \
     ninja \
     pybind11 \
