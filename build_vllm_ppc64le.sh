@@ -154,8 +154,9 @@ rm -rf "${TEMP_BUILD_DIR}"
 ########################################
 # Xgrammar
 ########################################
-uv pip install scikit-build-core==0.12.2 \
 uv pip install \
+   "scikit-build-core<0.9" \
+   "setuptools<70" \
     cmake \
     ninja \
     pybind11 \
