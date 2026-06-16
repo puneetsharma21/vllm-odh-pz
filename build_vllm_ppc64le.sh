@@ -155,7 +155,7 @@ rm -rf "${TEMP_BUILD_DIR}"
 # Xgrammar
 ########################################
 uv pip install \
-   "scikit-build-core<0.9" \
+   "scikit-build-core==0.11.6" \
    "pyproject-metadata<0.8" \
     pathspec \
     packaging \
