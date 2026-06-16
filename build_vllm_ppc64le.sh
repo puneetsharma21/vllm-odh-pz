@@ -121,8 +121,6 @@ try_install_from_devpi "opencv-python-headless==${OPENCV_VERSION}"
 try_install_from_devpi "torch==${TORCH_VERSION}"
 try_install_from_devpi "torchvision==${TORCHVISION_VERSION}"
 
-
-
 echo "========== Installing SymPy =========="
 uv pip install \
     --extra-index-url "$IBM_DEVPI_URL" \
@@ -157,12 +155,12 @@ rm -rf "${TEMP_BUILD_DIR}"
 # Xgrammar
 ########################################
 uv pip install \
-    scikit-build-core \
+    scikit-build-core==0.12.2 \
     cmake \
     ninja \
     pybind11 \
     nanobind \
-    apache-tvm-ffi>=0.1.9
+    "apache-tvm-ffi==0.1.12"
 
 TEMP_BUILD_DIR=$(mktemp -d)
 
