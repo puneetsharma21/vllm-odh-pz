@@ -157,6 +157,9 @@ rm -rf "${TEMP_BUILD_DIR}"
 uv pip install \
    "scikit-build-core<0.9" \
    "pyproject-metadata<0.8" \
+    pathspec \
+    packaging \
+    distro \
    "setuptools<70" \
     cmake \
     ninja \
