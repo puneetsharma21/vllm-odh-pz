@@ -92,7 +92,7 @@ python --version
 pip install -U pip setuptools-rust
 pip install uv
 pip install "setuptools<70" build wheel cmake auditwheel
-uv pip install "setuptools<70" cython meson-python "sympy>=1.13.3" --no-build-isolation
+uv pip install "setuptools<70" cython meson-python "sympy>=1.13.3" transformers==5.5.3 --no-build-isolation
 
 ########################################
 # Rust
@@ -200,9 +200,9 @@ export PYTHONPATH=/opt/vllm/lib64/python3.12/site-packages:/opt/vllm/lib/python3
 uv build \
     --wheel \
     --out-dir "${WHEEL_DIR}" \
-    --no-build-isolation
+    --no-build-isolation -v
 
-uv pip install "${WHEEL_DIR}"/xgrammar*.whl
+uv pip install -v "${WHEEL_DIR}"/xgrammar*.whl
 
 popd
 
@@ -250,4 +250,4 @@ uv pip install -r requirements/common.txt \
                -r requirements/cpu.txt \
                -r requirements/build/cpu.txt --extra-index-url "$IBM_DEVPI_URL" --index-strategy unsafe-best-match
 
-uv pip install --upgrade transformers==5.5.3
+#uv pip install --upgrade transformers==5.5.3
