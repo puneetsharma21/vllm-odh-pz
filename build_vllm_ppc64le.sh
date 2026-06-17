@@ -250,4 +250,4 @@ uv pip install -r requirements/common.txt \
                -r requirements/cpu.txt \
                -r requirements/build/cpu.txt --extra-index-url "$IBM_DEVPI_URL" --index-strategy unsafe-best-match
 
-uv pip install --upgrade transformers
+uv pip install --upgrade transformers==5.5.3
